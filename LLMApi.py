@@ -1,8 +1,8 @@
 import requests
 import json
 
-API_KEY = "qpBA3KSw2jhdOvs1DQ4kg7im"
-SECRET_KEY = "TBdsZRto3kRalDUDyNlWHTV3fZqUPiHV"
+API_KEY = "..."
+SECRET_KEY = "..."
 
 class LLMApi:
     # def __init__(self, text):
@@ -13,7 +13,6 @@ class LLMApi:
         self.content=t
         self.label=l
     def urlCon(self):
-        #7.18下线，可改为https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/ernie-lite-8k
         # url = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/eb-instant?access_token=" + self.get_access_token()
         url = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/ernie-speed-128k?access_token=" + self.get_access_token()
 
