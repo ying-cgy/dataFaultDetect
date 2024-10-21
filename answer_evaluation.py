@@ -3,8 +3,7 @@ import numpy as np
 from LLMApi import LLMApi
 
 class answerEvaluation:
-    # arrName = ["dog", "rooster", "pig", "cow", "frog", "cat", "hen", "insects", "sheep", "crow"]
-    # arrName = ['anger','disgust ','fear ','happy ','neutral','sad']
+
     arrName =["zero","one","two","three","four","five","six","seven","eight","nine"]
     answerPath=""
     resultPath=""
@@ -64,19 +63,3 @@ class answerEvaluation:
         aswcomframe.to_csv(self.resultPath,sep=',')
 ans=answerEvaluation("./answer/SpokenDigit_asym_answer_4.csv","./result/SpokenDigit_asym_answer_4.csv")
 ans.evaluate()
-# ans=answerEvaluation("./answer/CREMAD_sym_answer.csv","./result/CREMAD_sym_answer.csv")
-# ans.evaluate()
-# ans=answerEvaluation("./answer/ESC50_sym_answer_4.csv","./result/ESC50_sym_answer_4.csv")
-# ans.evaluate()
-# ans=answerEvaluation("./answer/CREMAD_asym_answer.csv","./result/CREMAD_asym_answer.csv")
-# ans.evaluate()
-# ans=answerEvaluation("./answer/CREMAD_asym_answer_4.csv","./result/CREMAD_asym_answer_4.csv")
-# ans.evaluate()
-# ans=answerEvaluation("./answer/CREMAD_poison_answer.csv","./result/CREMAD_poison_answer.csv")
-# ans.evaluate()
-# ans=answerEvaluation("./answer/SpokenDigit_sym_answer_New.csv","./result/SpokenDigit_sym_answer_New.csv")
-# ans.evaluate()
-# ans=answerEvaluation("./answer/SpokenDigit_asym_answer_New.csv","./result/SpokenDigit_sym_answer_New.csv")
-# ans.evaluate()
-# ans=answerEvaluation("./answer/SpokenDigit_poison_answer_New.csv","./result/SpokenDigit_poison_answer_New.csv")
-# ans.evaluate()
