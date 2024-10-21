@@ -1,6 +1,7 @@
 import requests
 import json
 
+# your keys
 API_KEY = "..."
 SECRET_KEY = "..."
 
