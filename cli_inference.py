@@ -66,11 +66,6 @@ def run(inPath,outPath):
         # comqes.append("Does the audio include a "+arr[int(str1[0])]+" ?")
         # comqes.append("Is the noise from "+arr[int(str1[0])]+" ?")
 
-        # comqes.append("Can you hear the"+arr[int(str1[0])]+" on the audio?")
-        # comqes.append("Is there a "+arr[int(str1[0])]+" on the audio?")
-        # comqes.append("Does the audio sound like a "+arr[int(str1[0])]+" ?")
-        # comqes.append("Can you identify the "+arr[int(str1[0])]+" from the audio??")
-
         #spoken digit
         comqes.append("Describe the context of the audio.")
         comqes.append("What you hear in the audio?")
@@ -113,34 +108,5 @@ def run(inPath,outPath):
 
     aswcomframe = pd.DataFrame({'filename':aswcomtname,'label':aswcomlab,'answer':aswcomcon})
     aswcomframe.to_csv(outPath,sep=',')
-# run("./dataset/ESC-50-master/noiseAudio/0.1/","./answer/ESC50_sym_answer.csv")
-# run("./dataset/ESC-50-master/asyNoiseAudio/0.1/","./answer/ESC50_asym_answer.csv")
-# run("./dataset/ESC-50-master/poisonAttack/","./answer/ESC50_poison_answer.csv")'
 
-# run("./dataset/ESC-50-master/noiseAudio/0.4/","./answer/ESC50_sym_answer_4.csv")
-# run("./dataset/ESC-50-master/asyNoiseAudio/0.4/","./answer/ESC50_asym_answer_4.csv")
-# from answer_evaluation import answerEvaluation
-# ans=answerEvaluation("./answer/ESC50_asym_answer_4.csv","./result/ESC50_asym_answer_4.csv")
-# ans.evaluate()
 run("./dataset/free-spoken-digit-dataset-1.0.9/asyNoiseAudio/0.4/","./answer/SpokenDigit_asym_answer_4.csv")
-from answer_evaluation import answerEvaluation
-ans=answerEvaluation("./answer/SpokenDigit_asym_answer_4.csv","./result/SpokenDigit_asym_answer_4.csv")
-ans.evaluate()
-
-# run("./dataset/free-spoken-digit-dataset-1.0.9/asyNoiseAudio/0.4/","./answer/SpokenDigit_asym_answer_4.csv")
-# run("./dataset/free-spoken-digit-dataset-1.0.9/poisonAttack/","./answer/SpokenDigit_poison_answer_New.csv")
-
-# run("/home/cgy/SALMONN/dataset/CREMAD/asyNoiseAudio/0.4/","./answer/CREMAD_asym_answer_4.csv")
-# run("/home/cgy/SALMONN/dataset/CREMAD/asyNoiseAudio/0.1/","./answer/CREMAD_asym_answer.csv")
-# run("/home/cgy/SALMONN/dataset/CREMAD/poisonAttack/","./answer/CREMAD_poison_answer.csv")
-
-# from answer_evaluation import answerEvaluation
-# ans=answerEvaluation("./answer/SpokenDigit_asym_answer_4.csv","./result/SpokenDigit_asym_answer_4.csv")
-# ans.evaluate()
-
-# ans=answerEvaluation("./answer/SpokenDigit_sym_answer_4.csv","./result/SpokenDigit_sym_answer_4.csv")
-# ans.evaluate()
-#
-# ans=answerEvaluation("./answer/SpokenDigit_poison_answer.csv","./result/SpokenDigit_poison_answer.csv")
-# ans.evaluate()# Copyright (2024) Tsinghua University, Bytedance Ltd. and/or its affiliates
-#
