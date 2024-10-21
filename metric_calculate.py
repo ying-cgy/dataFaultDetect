@@ -24,16 +24,11 @@ def cal(threshold):
     # print(len(result),len(realLabel))
     from sklearn.metrics import precision_score, recall_score,confusion_matrix
     from sklearn import metrics
-    # precision = precision_score(realLabel, result)
-    # recall = recall_score(realLabel, result)
-    # print(f'Precision: {precision}, Recall: {recall}')\
-    fpr, tpr, _ = metrics.roc_curve(realLabel,result)
-    print("metric:",tpr,fpr)
-
-    roc = metrics.auc(fpr, tpr)
-    ap = metrics.average_precision_score(realLabel,result)
-
-    print(roc,ap)
+    tn,fp,fn,tp=confusion_matrix(realLabel,result).ravel()
+    print(tp,fp,tn,fn)
+    tpr=tp/(tp+fn)
+    fpr=fp/(fp+tn)
+    print(tpr,fpr)
     return tpr,fpr
 threshold=[0.167,0.334,0.5,0.667,0.834]
 for i in threshold:
