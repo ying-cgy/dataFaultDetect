@@ -1,7 +1,8 @@
 import numpy as np
 # from sklearn import metric
 import pandas as pd
-common = pd.read_csv('/home/cgy/SALMONN/result/SpokenDigit_asym_answer_4.csv')
+# common = pd.read_csv('D://codePy//salmonn-rela//salmonn//result//SpokenDigit_poison_answer_New.csv')
+common = pd.read_csv('D://codePy//salmonn-rela//salmonn//result//CREMAD_poison_answer.csv')
 
 realLabel=common['realLabel']
 # result=common['result']
@@ -29,6 +30,7 @@ def cal(threshold):
     tpr=tp/(tp+fn)
     fpr=fp/(fp+tn)
     print(tpr,fpr)
+    print(tpr-fpr)
     return tpr,fpr
 threshold=[0.167,0.334,0.5,0.667,0.834]
 for i in threshold:
